@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.PendingIntent;
 import android.app.AlarmManager;
 import android.content.Intent;
+import android.content.Context;
 
 import java.lang.System;
 
@@ -32,15 +33,12 @@ public class RNAppRelauncherModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void relaunch() {
-  	System.exit(0);
-  	/*
-  	Intent mStartActivity = new Intent(activity);
-	int mPendingIntentId = 123456;
-	PendingIntent mPendingIntent = PendingIntent.getActivity(HomeActivity.this, mPendingIntentId, mStartActivity,
-	PendingIntent.FLAG_CANCEL_CURRENT);
-	AlarmManager mgr = (AlarmManager) HomeActivity.this.getSystemService(Context.ALARM_SERVICE);
-	mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
-	System.exit(0);
-  	*/
+  	Intent mStartActivity = new Intent(activity, activity.getClass());
+    int mPendingIntentId = 123456;
+    PendingIntent mPendingIntent = PendingIntent.getActivity(activity, mPendingIntentId, mStartActivity,
+    PendingIntent.FLAG_CANCEL_CURRENT);
+    AlarmManager mgr = (AlarmManager) activity.getSystemService(Context.ALARM_SERVICE);
+    mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, mPendingIntent);
+    System.exit(0);
   }
 }
