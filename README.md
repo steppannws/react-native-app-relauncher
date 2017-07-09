@@ -34,4 +34,7 @@ import RNAppRelauncher from 'react-native-app-relauncher';
 
 RNAppRelauncher.relaunch();
 ```
+
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BMJQCDRFJVP0WKXYJX1GSHPJ/Android)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BMJQCDRFJVP0WKXYJX1GSHPJ/Android/vote)
+[![](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BMJQCDRFJVP0WKXYJX1GSHPJ/iOS)](https://m131jyck4m.execute-api.us-west-2.amazonaws.com/prod/poll/01BMJQCDRFJVP0WKXYJX1GSHPJ/iOS/vote)
   
